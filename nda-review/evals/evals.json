@@ -1,0 +1,25 @@
+{
+  "skill_name": "nda-review",
+  "data_origin": "synthetic",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Review this NDA for Copperfin Robotics, Inc. Copperfin will share its own information. Use the default playbook.",
+      "files": ["evals/fictional-nda-01.md"],
+      "answer_key": "evals/expected-findings-01.md",
+      "expected_output": "A review in the template's layout, rated Red, with 4 Must fix, 6 Should fix and 3 Note rows, the audit clause under Not covered by the playbook, Exhibit A under Could not check, and every quote word for word from the NDA.",
+      "expectations": [
+        "The header says the fictional default playbook was used.",
+        "The overall rating is Red.",
+        "The four Must fix rows are exclusions (clause 3), term (clause 7), non-solicitation (clause 9) and indemnity (clause 10), and they come before every other row.",
+        "The six Should fix rows are clauses 2, 4, 6, 8, 11 and 12.",
+        "Governing law (16) and assignment (15) are rated Note, and the missing publicity or no-obligation clause is a Note row marked Not found in the NDA.",
+        "Clause 13 (Compliance Audits) appears under Not covered by the playbook and is not rated.",
+        "Exhibit A appears under Could not check.",
+        "Every quoted NDA passage appears word for word in fictional-nda-01.md.",
+        "No row raises the whistleblower immunity notice.",
+        "Every suggested fix moves the clause toward the playbook's preferred position or a fallback, for Copperfin's side."
+      ]
+    }
+  ]
+}
