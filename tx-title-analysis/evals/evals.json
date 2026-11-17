@@ -1,0 +1,21 @@
+{
+  "skill_name": "tx-title-analysis",
+  "data_origin": "synthetic",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Analyze this commitment for the buyer, Bramblewood Homes, LLC. I need the requirements checklist and the exception cure recommendations.",
+      "files": ["evals/fictional-commitment-01.md"],
+      "answer_key": "evals/expected-01.md",
+      "expected_output": "A DRAFT requirements checklist and DRAFT exception cure recommendations that cite every Schedule B-I and B-II item by number, quote recording references exactly, mark missing information as not shown, and cite standards only from the skill's own list.",
+      "expectations": [
+        "Every Schedule B-I and B-II item appears, cited by its schedule and item number.",
+        "Document No. 2019-018833 and Volume 512, Page 77 appear exactly as written.",
+        "The spousal joinder requirement is tied to the vesting in Schedule A and cites Standard 14.90 or Chapter XIV.",
+        "No recording reference, date, amount or name appears that is not in the commitment.",
+        "Every standard number cited appears in the skill's quick reference or references/tx-exam-standards.md.",
+        "Each output carries the DRAFT disclaimer."
+      ]
+    }
+  ]
+}

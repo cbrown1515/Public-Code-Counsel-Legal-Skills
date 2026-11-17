@@ -1,0 +1,17 @@
+{
+  "skill_name": "skill-template",
+  "data_origin": "synthetic",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "The request a user would type.",
+      "files": ["evals/fictional-input-01.md"],
+      "answer_key": "evals/expected-01.md",
+      "expected_output": "One sentence describing a correct result.",
+      "expectations": [
+        "A specific, checkable statement about the output.",
+        "Every quote appears word for word in the input."
+      ]
+    }
+  ]
+}

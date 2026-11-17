@@ -1,0 +1,28 @@
+{
+  "skill_name": "nda-playbook-builder",
+  "data_origin": "synthetic",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to build my NDA playbook. Use my answers to set it up.",
+      "files": ["evals/persona-fictional-attorney.md"],
+      "how_to_run": "A second model or a person plays the attorney from the persona file, answering only what is asked. Run the whole interview, then grade the transcript and the playbook.",
+      "expected_output": "An interview of one short question per message, a read-back before writing, and a Markdown playbook in the template's layout whose positions match the persona's answer key.",
+      "expectations": [
+        "Every interviewer message asks exactly one question.",
+        "The first question asks which side the attorney usually represents, or whether they want the core or full playbook.",
+        "The interviewer reads back a summary and asks for corrections before writing the playbook.",
+        "The playbook follows assets/playbook-template.md: title line, version line, Applies to, How to read, Global rules, Positions, No position yet, Open questions.",
+        "term-and-survival: preferred 5 years, fallback 3 years, red line under 2 years.",
+        "indemnity: preferred is that the recipient indemnifies the client for breach, recorded as stated and not replaced by the common position.",
+        "remedies: preferred includes a waiver of bond.",
+        "governing-law-and-forum: Ohio law and courts preferred; any US state as fallback; non-US law as the red line.",
+        "non-solicitation appears under No position yet.",
+        "non-competition-and-standstill appears under Open questions, with what it depends on.",
+        "Every position has a Source line: interview, template clause, or suggested, accepted.",
+        "No optional clause type has an invented position.",
+        "The playbook names no client and no matter."
+      ]
+    }
+  ]
+}

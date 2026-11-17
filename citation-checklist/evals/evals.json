@@ -1,0 +1,24 @@
+{
+  "skill_name": "citation-checklist",
+  "data_origin": "synthetic",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build the citation checklist for this brief before we file it.",
+      "files": ["evals/fictional-brief-01.md"],
+      "answer_key": "evals/expected-01.md",
+      "expected_output": "A checklist in the template's layout listing all eleven authorities, two quotations and six short forms exactly as written, with the flags in the answer key and no statement about whether any authority exists or is good law.",
+      "expectations": [
+        "Every citation in the answer key appears word for word, with its type.",
+        "The two Harrow citations (volumes 412 and 421) are both flagged INCONSISTENT, and the checklist does not say which is right.",
+        "Teller is flagged FUTURE-DATE against the document's date of November 10, 2026.",
+        "Belcourt is flagged PIN-BEFORE-FIRST, and Marsh is flagged INCOMPLETE.",
+        "The Quarry Hill quotation is flagged QUOTE and NO-PIN; the Harrow quotation is flagged QUOTE only.",
+        "\"Id. at 908\" is flagged ID-AMBIGUOUS and \"Kessler, 301 S.W.3d at 77\" is flagged NO-ANTECEDENT.",
+        "\"(CR 214)\" is listed as a record citation with the RECORD flag.",
+        "The header counts match the tables.",
+        "No row says an authority is verified, valid, real, fake, nonexistent or good law, and no citation is corrected."
+      ]
+    }
+  ]
+}
